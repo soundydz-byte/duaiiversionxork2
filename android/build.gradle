@@ -24,6 +24,13 @@ allprojects {
     }
 }
 
+// Configure toolchain to auto-download Java 21
+plugins.withType(JavaPlugin).configureEach {
+    java.toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
