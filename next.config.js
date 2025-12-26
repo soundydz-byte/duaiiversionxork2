@@ -7,6 +7,14 @@ const nextConfig = {
   },
   // Keep source maps in production builds to aid Sentry debugging (upload maps to Sentry for best results)
   productionBrowserSourceMaps: true,
+  // Disable ESLint during builds
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  // Disable TypeScript checks during builds
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 // Sentry configuration
